@@ -25,8 +25,7 @@
     "analyze": "npm run clean && npm run build:prod -- --stats-json && webpack-bundle-analyzer ./dist/stats.json",
     "contributors:add": "all-contributors add",
     "contributors:generate": "all-contributors generate && node .all-contributors-html.js",
-    "contributors:check": "all-contributors check",
-    "postinstall": "ng build --aot -prod"
+    "contributors:check": "all-contributors check"
   },
   "husky": {
     "hooks": {

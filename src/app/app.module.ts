@@ -9,6 +9,7 @@ import { SchoolModule } from './school/school.module';
 import { SemesterModule } from './semester/semester.module';
 import { PeriodModule } from './period/period.module';
 import { RoomModule } from './room/room.module';
+import { RoomeditModule } from './roomedit/roomedit.module';
 import { TeacherModule } from './teacher/teacher.module';
 import { CourseModule } from './course/course.module';
 import { SectionModule } from './section/section.module';
@@ -20,7 +21,6 @@ import { StaticModule } from './static';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RoomeditComponent } from './roomedit/roomedit.component';
 
 @NgModule({
   imports: [
@@ -47,12 +47,12 @@ import { RoomeditComponent } from './roomedit/roomedit.component';
     ClassModule,
     StudentModule,
     ScheduleModule,
-    // RoomeditModule,
+    RoomeditModule,
     
     // app
     AppRoutingModule
   ],
-  declarations: [AppComponent, RoomeditComponent], //add ,  when add roomedit
+  declarations: [AppComponent], //add ,  when add roomedit
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -25,7 +25,8 @@
     "analyze": "npm run clean && npm run build:prod -- --stats-json && webpack-bundle-analyzer ./dist/stats.json",
     "contributors:add": "all-contributors add",
     "contributors:generate": "all-contributors generate && node .all-contributors-html.js",
-    "contributors:check": "all-contributors check"
+    "contributors:check": "all-contributors check",
+    "postinstall": "ng build --aot -prod"
   },
   "husky": {
     "hooks": {
@@ -40,6 +41,8 @@
   },
   "private": true,
   "dependencies": {
+    "@angular/cli": "~6.1.3",
+    "@angular/compiler-cli": "^6.1.2",
     "@angular/animations": "^6.1.2",
     "@angular/cdk": "^6.4.3",
     "@angular/common": "^6.1.2",

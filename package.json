@@ -25,7 +25,8 @@
     "analyze": "npm run clean && npm run build:prod -- --stats-json && webpack-bundle-analyzer ./dist/stats.json",
     "contributors:add": "all-contributors add",
     "contributors:generate": "all-contributors generate && node .all-contributors-html.js",
-    "contributors:check": "all-contributors check"
+    "contributors:check": "all-contributors check",
+    "postinstall": "ng build --prod"
   },
   "husky": {
     "hooks": {
@@ -40,6 +41,7 @@
   },
   "private": true,
   "dependencies": {
+    "@angular-devkit/build-angular": "~0.7.0",
     "@angular/cli": "~6.1.3",
     "@angular/compiler-cli": "^6.1.2",
     "@angular/animations": "^6.1.2",
@@ -67,15 +69,13 @@
     "file-saver": "^1.3.8",
     "hammerjs": "^2.0.8",
     "rxjs": "^6.2.2",
+    "typescript": "~2.9.2",
     "uuid": "^3.1.0",
     "web-animations-js": "^2.2.5",
     "xlsx": "^0.14.0",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.7.0",
-    "@angular/cli": "~6.1.3",
-    "@angular/compiler-cli": "^6.1.2",
     "@angular/language-service": "^6.1.2",
     "@types/jasmine": "~2.8.3",
     "@types/node": "~9.4.0",
@@ -99,7 +99,6 @@
     "standard-version": "^4.2.0",
     "ts-node": "~5.0.0",
     "tslint": "~5.11.0",
-    "typescript": "~2.9.2",
     "webpack-bundle-analyzer": "^2.13.1"
   }
 }

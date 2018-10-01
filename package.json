@@ -26,7 +26,7 @@
     "contributors:add": "all-contributors add",
     "contributors:generate": "all-contributors generate && node .all-contributors-html.js",
     "contributors:check": "all-contributors check",
-    "postinstall": "ng build --prod"
+    "preinstall": "npm install -g @angular/cli @angular/compiler-cli typescript"
   },
   "husky": {
     "hooks": {
